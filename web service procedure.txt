@@ -1,0 +1,49 @@
+1. New Project -> Java Web -> Web Application
+Project Name - CalculstorWebService ->Next -> GlassFish Server -> Next (No framework) ->Finish
+
+2.Right click project ->slect web service -> Name - Calculator->Package name - com.unique-> finish
+
+3. Under web services folder
+create metjod in calculator
+right click caluculator - > right click add operation -> Name (get Number), return type, 2 parameter- name , type,->ok
+
+In method -> return num1 + num2;
+
+4. Right click Project -> Clean Build 
+Right click Project -> Deploy
+Web Service -> Caluclaator ->Test Web Service
+
+5. New Project -> Java Web -> Web Application
+Name - CalculatorWebServiceClient -> Next -> GlassFish Server -> Next (No framework) ->Finish
+
+6. Client Righr Click -> New Web Service Client
+Give web service (calculator) path ->Finish
+
+7. in client index.html
+inseert form
+Action : Calculator
+Enter Number 1: (Insert text Input) txt1 <br>
+Enter Number 2: (Insert text Input) txt2 <br>
+
+Insert button - name submit ->ok
+
+right click ->run
+
+8. CalculatorWebServiceClient -> SOurce Packages -> Right Click -> New Servlet - Name - Calculator (Same as action in form) ->next -> check add information ....
+
+9. in calculator.java under source package
+drag n drop getNumber under HttpServlet metrhods...
+
+10. in calculator.java under source package
+below try (PrintWriter....
+int num1, num2;
+num1 = Integer.parseInt(request.getparameter("txt1"));
+num2 = Integer.parseInt(request.getparameter("txt2"));
+
+11.in calculator.java under source package
+between body (line 48)
+out.println("<h1>" +getNumber(num1,num2)+ "</h1>");
+
+12. Right Click CalculatorWebServiceClient -> Clean and Build
+
+13.  in client index.html _>open -> right click-> run
