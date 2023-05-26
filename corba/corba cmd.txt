@@ -1,0 +1,9 @@
+1st cmd
+javac *.java Calculator/*java
+orbd - ORBInitalport 3050
+
+2nd cmd
+java Start Server - ORB Initialport 3050
+
+3rd cmd
+java StartClient - ORB Initialport 3050
